@@ -61,7 +61,8 @@ body {
 
 /* Half baked ideas */
 .ideas {
-  width: 80%;
+  width: 100%;
+  padding: 20px;
 }
 
 .row {
