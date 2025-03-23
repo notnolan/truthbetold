@@ -8,6 +8,26 @@ body {
   font-family: Verdana;
 }
 
+/* Styling for the navigation bar*/
+#navbar {
+  position: fixed; /* Make it stick/fixed */
+  top: -50px; /* Hide the navbar 50 px outside of the top view */
+  width: 100%; /* Full width */
+  transition: top 0.3s; /* Transition effect when sliding down (and up) */
+  z-index: 1000; /* Make sure it stays on top */
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+
 /* Banner image animation for landing page*/
 .banner {
   display: flex;
@@ -39,17 +59,9 @@ body {
   color: white;
 }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
+/* Half baked ideas */
 .ideas {
   width: 80%;
-}
-
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 95%;
-  padding: 20px;
 }
 
 .row {

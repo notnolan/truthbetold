@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panecronomicon</title>
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+
+  <body>
+  <!---Navigation bar for website-->
+    <div id="navbar">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+    </div>
+
+    <!--This is the body text of the about page-->
+    <div>
+        <p>This is an experimental website to think through design's intersection with privacy, security, trust, and technology.</p>
+    </div>
+
+    <script>
+        // When the user scrolls down 20px from the top of the document, slide down the navbar
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("navbar").style.top = "0";
+          } else {
+            document.getElementById("navbar").style.top = "-50px";
+          }
+        }
+    </script>
+  </body>
+</html>
