@@ -8,22 +8,28 @@ body {
   font-family: Verdana;
 }
 
-.autoBlur {
-  animation: autoBlurAnimation linear both;
-  animation-timeline: view();
-}
-@keyframes autoBlurAnimation{
-  0%{
-    filter: blur(40px);
-  }
-  45%, 55%{
-    filter: blur(0px);
-  }
-  100%{
-    filter: blur();
-  }
+/* Banner image animation for landing page*/
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
+.banner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(media/splash.jpeg);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+
+  mask-image: url(media/infinite-splash.gif);
+  mask-size: cover;
+  mask-position: center;
+}
 
 /* Header/Blog Title */
 .header {
