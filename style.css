@@ -54,8 +54,46 @@ body {
 /* Add a card effect for articles */
 .card {
   background-color: rgb(26, 26, 26);
+  height: fit-content;
   padding: 20px;
   margin-top: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Adding a gradient effect to the border of cards*/
+@property --angle{
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.card::after, .card::before{
+  content: '';
+  position: absolute;
+  height: calc(100% + 5px); /* Adjust height */
+  width: calc(100% + 5px); /* Adjust width */
+  background-image: conic-gradient(from var(--angle), #037940, #00ff99, #00d555, #5cee96, #037940);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Use transform instead of translate */
+  z-index: -1;
+  padding: 1px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
+}
+
+.card::before{
+  filter: blur(2rem);
+  opacity: 0.3;
+}
+@keyframes spin{
+  from{
+    --angle: 0deg;
+  }
+  to{
+    --angle: 360deg;
+  }
 }
 
 /* Clear floats after the columns */
@@ -63,14 +101,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
 }
 
 /* recolor the links in website*/
