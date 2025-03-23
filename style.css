@@ -35,9 +35,8 @@ body {
 
 /* Create two unequal columns that floats next to each other */
 /* Left column */
-.leftcolumn {
-  float: left;
-  width: 100%;
+.ideas {
+  width: 80%;
 }
 
 /* Fake image */
@@ -45,6 +44,11 @@ body {
   background-color: #aaa;
   width: 95%;
   padding: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 /* Add a card effect for articles */
